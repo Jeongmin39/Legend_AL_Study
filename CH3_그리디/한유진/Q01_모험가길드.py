@@ -9,5 +9,5 @@ for fear in fear_level:
     if group_cnt >= fear:
         max_group +=1
         group_cnt = 0
-        continue
+        
 print(max_group)
