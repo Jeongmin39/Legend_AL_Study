@@ -59,7 +59,5 @@
         2  --  2개
         3  --  3개
     3) 따라서 총 경우의 수는
-        ```math
         \sum_{i=1}^{M}\; \sum_{j=i}^{M}ballcnt[i] * ballcnt[j]
-        ```
 ```
