@@ -60,5 +60,5 @@
         3  --  3개
     3) 따라서 총 경우의 수는
 ```
-        $$\sum_{i=1}^{M}\; \sum_{j=i}^{M}ballcnt[i] * ballcnt[j]$$
+$$\sum_{i=1}^{M}\; \sum_{j=i}^{M}ballcnt[i] * ballcnt[j]$$
 
