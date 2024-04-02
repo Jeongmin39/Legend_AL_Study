@@ -62,3 +62,7 @@
 ```
 $$\sum_{i=1}^{M}\; \sum_{j=i+1}^{M}ballcnt[i] * ballcnt[j]$$
 
+* Q06
+
+    
+
