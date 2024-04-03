@@ -1,20 +1,24 @@
+from operator import itemgetter
+
 def solution(food_times, k):
-    answer = 0
+    foods = []
+    n = len(food_times)
+    for i in range(n):
+        foods.append((food_times[i], i+1))
+    foods.sort()
     
-    if sum(food_times) <= k:
-        return -1
-    
-    passed_time = 0
-    while True:
-        for i in range(len(food_times)):
-            required_time = food_times[i]
-            passed_time += required_time
-            
-            if passed_time >= k:
-                remaining_time = passed_time - required_time
-                remainder = k - remaining_time
-                answer = (i + 1 + remainder) % len(food_times)
-                return answer if answer != 0 else len(food_times)
-            food_times[i] = 0
-          
-    return answer
+    previous_time = 0
+    for i, food in enumerate(foods):
+        diff = food[0] - previous_time
+        if diff != 0:
+            spend_time = diff * n
+            if spend_time <= k:
+                k -= spend_time
+                previous_time = food[0]
+            else:
+                k %= n
+                sublist = sorted(foods[i:], key = itemgetter(1))
+                return sublist[k][1]
+        n -= 1
+        
+    return -1
