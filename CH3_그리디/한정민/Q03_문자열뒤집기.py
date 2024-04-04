@@ -7,8 +7,8 @@ if (str[0] == '0'):
 else:
     one_cnt += 1
 
-for i in range(len(str) - 1):
-    if (str[i] != str[i+1]):
+for i in range(1, len(str)):
+    if (str[i] != str[i-1]):
         if (str[i] == '0'):
             zero_cnt += 1
         else:
