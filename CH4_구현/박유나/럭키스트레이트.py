@@ -1,3 +1,4 @@
+#Q07
 N=input()
 l=(len(N)//2)
 p=0
