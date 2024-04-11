@@ -41,7 +41,7 @@
     - rotate90clockwise()
 
         시계 방향으로 key를 회전시켜주기 위한 함수로 90도 회전할 때마다 각 key의 원소가 
-        rotatedKey[j, N - i] = originalKey[i][j]임을 이용
+        rotatedKey[j, M -1 - i] = originalKey[i][j]임을 이용
 
         (예시)
 
@@ -169,3 +169,6 @@
         c. 반복문을 돌면서 도시의 치킨 거리 합 최소 구하기
 
 ```
+
+* Q14
+
