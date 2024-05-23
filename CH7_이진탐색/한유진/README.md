@@ -1,0 +1,21 @@
+
+* Q27 정렬된 배열에서 특정 수의 개수 구하기
+
+    N개의 원소롤 포함한 수열이 오름차순으로 정렬되어 있을 때,
+    수열에 x가 등장하는 횟수를 계산 (없다면 -1 출력)
+    이때 시간 복잡도가 O(log N)이어야 함
+
+    첫 문제 풀이를 할 때는 이진 탐색을 재귀적으로 해가면서 x의 개수를 세어주었는데 이러면 시간 복잡도가 O(N logN)이 나옴
+
+    따라서 이를 해결하기 위해서 처음으로 x가 나오는 곳의 인덱스와 마지막으로 x가 나오는 곳의 인덱스를 각각 이진탐색으로 찾고 이 인덱스를 이용하여 x의 계수를 구해줌! 
+
+    [이진 탐색 구현]
+    1. lower_bound와 upper_bound를 각각 처음에 0과 len(seq)-1로 초기화
+    2. mid = (lower_bound + upper_bound)//2를 구해서 
+       
+        i. seq[mid]의 값이 x와 같으면 찾은 index를 업데이트하고 
+            
+            - first index를 찾을 땐 upper_bound = mid - 1로 업데이트
+            - last index를 찾을 땐 lower_bound = mid + 1로 업데이트
+        ii. seq[mid]의 값이 x보다 크면 upper_bound = mid - 1
+        iii. seq[mid]의 값이 x보다 작으면 lower_bound = mid + 1 
