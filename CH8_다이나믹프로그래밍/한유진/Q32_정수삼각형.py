@@ -22,6 +22,8 @@ find_max_route(0, 0, 0)
 print(maxResult)
 '''
 
+# 왜 for문이 재귀보다 효율적일까...?
+
 n = int(input())
 triangle = []
 
